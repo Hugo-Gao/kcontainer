@@ -21,3 +21,4 @@ mkdir ..\kcontainer\bundle\test1
 xcopy ..\bundle\test1 ..\kcontainer\bundle\test1\ /S /Y
 mkdir ..\kcontainer\bundle\test2
 xcopy ..\bundle\test2 ..\kcontainer\bundle\test2\ /S /Y
+PAUSE

@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
  */
 public class KContainer {
   private static Logger logger = LoggerFactory.getLogger(KContainer.class);
-  private static final String BUNDLE_PATH = "bundle";
+  private static final String BUNDLE_PATH = "/Users/gaoyunfan/code/kcontainer/kcontainer/bundle";
   private SharedClassList sharedClasses;
   private Map<String, Bundle> bundles;
   

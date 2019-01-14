@@ -1,6 +1,7 @@
 package com.codemacro.container;
 
 import java.io.File;
+import java.net.MalformedURLException;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -50,7 +51,13 @@ public class Bundle {
 
   public static Bundle create(File home, String name, SharedClassList sharedClasses, 
       BundleConf conf) {
-    BundleClassLoader loader = new BundleClassLoader(home, sharedClasses);
+    System.out.println(home);
+    BundleClassLoader loader = null;
+    try {
+      loader = new BundleClassLoader(home, sharedClasses);
+    } catch (MalformedURLException e) {
+      e.printStackTrace();
+    }
     List<String> exports = conf.getExportClassNames();
     if (exports != null) {
       logger.info("load exported classes for {}", name);
